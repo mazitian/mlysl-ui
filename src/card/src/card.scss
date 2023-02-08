@@ -1,0 +1,49 @@
+@import '../../assets/common.scss';
+
+$border: 1px solid $ml-border-color;
+$shadow: 7px 7px 15px -7px rgba(46, 44, 44, 0.25);
+
+.ml-card {
+  border-radius: 12px;
+  background-color: #fff;
+  color: $ml-text;
+  border: $border;
+  overflow: hidden;
+  transition: 0.5s;
+  &__header {
+    box-sizing: border-box;
+    padding: 15px;
+    border-bottom: $border;
+  }
+  &__content {
+    padding: 15px;
+  }
+  &__handle {
+    border-top: $border;
+    padding: 15px;
+  }
+}
+
+.ml-card__shadow--always {
+  box-shadow: $shadow;
+}
+
+.ml-card__shadow--hover {
+  &:hover {
+    box-shadow: $shadow;
+  }
+}
+
+html.dark {
+  .ml-card {
+    background-color: #242424;
+    border-color: #414243;
+    color: #e4e7ed;
+    &__header {
+      border-bottom: 1px solid #414243;
+    }
+    &__handle {
+      border-top: 1px solid #414243;
+    }
+  }
+}

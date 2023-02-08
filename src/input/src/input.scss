@@ -1,0 +1,7 @@
+.ml-input__input {
+  border: 1px #dcdfe6 solid;
+  border-radius: 4px;
+  &:focus {
+    border: 1px #409eff solid;
+  }
+}

@@ -1,0 +1,37 @@
+// 定义主题变量
+$ml-border-radius: var(--ml-border-radius, 2px); //一般圆角
+$ml-border-color: var(--ml-border-color, #dcdfe6);
+$ml-font-size-md: var(--ml-font-size-md, 12px); //当组件size为''时使用此字号大小
+$ml-animation-duration-slow: var(--ml-animation-duration-slow, 300ms);
+$ml-animation-ease-in-out-smooth: var(
+  --ml-animation-ease-in-out-smooth,
+  cubic-bezier(0.645, 0.045, 0.355, 1)
+);
+$ml-light-text: var(--ml-light-text, #ffffff); // 有色深色背景下字体颜色（固定）
+$ml-primary: var(--ml-primary, #5e7ce0); // 主要按钮，同品牌色
+$ml-primary-hover: var(--ml-primary-hover, #7693f5); // 主要按钮悬停
+$ml-primary-active: var(--ml-primary-active, #344899); // 主要按钮激活
+$ml-text: var(--ml-text, #252b3a); // 正文文本
+$ml-block: var(
+  --ml-block,
+  #ffffff
+); // 大面积的不可折叠区块的背景色（例如顶部导航背景色）
+$ml-line: var(--ml-line, #adb0b8); // 边框分割线，仅用于边框
+$ml-form-control-line-active: var(
+  --ml-form-control-line-active,
+  #5e7ce0
+); // 表单控件边框激活色，用于获得焦点
+$ml-brand-active: var(--ml-brand-active, #526ecc); // 品牌色激活色（加深）
+$ml-brand-active-focus: var(
+  --ml-brand-active-focus,
+  #344899
+); // 品牌色焦点色（重度加深）
+
+$ml-font-size-sm: var(--ml-font-size-md, 10px); //当组件size为''时使用此字号大小
+$ml-font-size-md: var(--ml-font-size-md, 12px); //当组件size为''时使用此字号大小
+$ml-font-size-lg: var(--ml-font-size-md, 14px); //当组件size为''时使用此字号大小
+
+$ml-primary-disabled: var(--ml-primary-disabled, #98a8df); // 主要按钮禁用状态
+$ml-disabled-text: var(--ml-disabled-text, #757a83); // 禁用文本
+$ml-disabled-bg: var(--ml-disabled-bg, #c6c9cf); // 禁用背景
+$ml-disabled-line: var(--ml-disabled-line, #a5a8ad); // 禁用边框

@@ -1,0 +1,170 @@
+.ml-link {
+  display: inline-flex;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: #606266;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+  height: 24px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    height: 0;
+    bottom: 0;
+    // border-bottom: 1px solid #colors[primary];
+  }
+}
+
+.ml-link--primary {
+  color: #409eff;
+}
+
+.ml-link--primary:hover {
+  &:not(.is-disabled) {
+    opacity: 0.8;
+    color: #79bbff;
+  }
+}
+
+.ml-link--primary.is-disabled {
+  opacity: 0.7;
+  color: #colors[primary];
+}
+
+.ml-link.is-disabled:hover {
+  cursor: not-allowed;
+}
+
+.ml-link.primary.is-underline:hover {
+  &:not(.is-disabled) {
+    &::after {
+      display: block;
+      border-bottom: 1px solid #colors[primary];
+    }
+  }
+}
+
+// Success
+.ml-link--success.sucesss {
+  color: #colors[success];
+}
+
+.ml-link--success:hover {
+  &:not(.is-disabled) {
+    opacity: 0.8;
+    color: #colors[success];
+  }
+}
+
+.ml-link--success.is-disabled {
+  opacity: 0.7;
+  color: #colors[success];
+  &:hover {
+    color: #colors[success];
+  }
+}
+
+.ml-link.sucesss.is-underline:hover {
+  &:not(.is-disabled) {
+    &::after {
+      display: block;
+      border-bottom: 1px solid #colors[success];
+    }
+  }
+}
+
+// info
+.ml-link--info.info {
+  color: #colors[info];
+}
+
+.ml-link--info:hover {
+  &:not(.is-disabled) {
+    opacity: 0.8;
+    color: #colors[primary];
+  }
+}
+
+.ml-link--info.is-disabled {
+  opacity: 0.8;
+  color: #colors[info];
+  &:hover {
+    color: #colors[info];
+  }
+}
+
+.ml-link.info.is-underline:hover {
+  &:not(.is-disabled) {
+    &::after {
+      display: block;
+      border-bottom: 1px solid #colors[info];
+    }
+  }
+}
+
+// danger
+
+.ml-link--danger {
+  color: #colors[danger];
+}
+
+.ml-link--danger:hover {
+  &:not(.is-disabled) {
+    opacity: 0.8;
+    color: #colors[danger];
+  }
+}
+
+.ml-link--danger.is-disabled {
+  opacity: 0.8;
+  color: #colors[danger];
+  &:hover {
+    color: #colors[danger];
+  }
+}
+
+.ml-link.danger.is-underline:hover {
+  &:not(.is-disabled) {
+    &::after {
+      display: block;
+      border-bottom: 1px solid #colors[danger];
+    }
+  }
+}
+
+// warning
+.ml-link--warning {
+  color: #colors[warning];
+}
+
+.ml-link--warning:hover {
+  opacity: 0.8;
+  color: #colors[-warning-hover];
+}
+
+.ml-link.warning-distbled.is-disabled:hover {
+  cursor: not-allowed;
+  &:hover {
+    color: #colors[warning];
+  }
+}
+
+.ml-link--warning.is-disabled {
+  opacity: 0.8;
+  color: #colors[warning];
+}
+
+.ml-link.is-underline:hover {
+  &:not(.is-disabled) {
+    &::after {
+      display: block;
+      border-bottom: 1px solid #colors[warning];
+    }
+  }
+}

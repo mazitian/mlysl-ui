@@ -1,0 +1,25 @@
+.ml-popover {
+  background: #ffffff;
+  border: 1px solid #e4e7ed;
+  border-radius: 4px;
+  padding: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+  width: 200px;
+  position: absolute;
+  z-index: 99;
+
+  &__title {
+    color: #303133;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  &__arrow {
+    position: absolute;
+    background: #fff;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    z-index: 9;
+    border: solid 1px #e4e7ed;
+  }
+}
