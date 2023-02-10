@@ -35,5 +35,7 @@ features:
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+  --vp-custom-block-tip-bg: #A3C0F1;
+  --vp-custom-block-tip-text: #000;
 }
 </style>

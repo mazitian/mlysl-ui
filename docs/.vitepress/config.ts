@@ -1,6 +1,7 @@
 import { demoBlockPlugin } from 'vitepress-theme-demoblock'
 
 export default {
+  head: [['link', { rel: 'icon', href: '/headlogo.png' }]],
   themeConfig: {
     // base: '/mlysl/',
     siteTitle: false,
@@ -55,7 +56,8 @@ export default {
           text: '数据录入型组件',
           items: [
             { text: 'Form 表单', link: '/components/form/' },
-            { text: 'Upload 上传', link: '/components/upload/' }
+            { text: 'Upload 上传', link: '/components/upload/' },
+            { text: 'Selector 选择器', link: '/components/selector/' }
           ]
         },
         {

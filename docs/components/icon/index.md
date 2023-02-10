@@ -1,5 +1,9 @@
 # Icon 图标
 
+::: tip
+推荐通过 iconfont 自行导入图标
+:::
+
 ## 基本用法
 
 设置图标字体中 name 或者远程资源地址。
@@ -83,6 +87,7 @@
     <arrow-down-icon :size="40"></arrow-down-icon>
     <shang-pu-icon :size="40"></shang-pu-icon>
     <close-icon :size="40"></close-icon>
+    <down-line-icon :size="40"></down-line-icon>
   </div>
 </template>
 <style>
@@ -104,3 +109,10 @@
 | name   | 图标的名称或者链接 | `String`            | -      | -     |
 | size   | 图标的尺寸         | `String` / `Number` | -      | -      |
 | color  | 字体图标的颜色     | `String`            | -      | -      |
+
+<style>
+:root {
+  --vp-custom-block-tip-bg: #EEF5FE;
+  --vp-custom-block-tip-text: #6C9BEE;
+}
+</style>

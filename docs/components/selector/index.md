@@ -1,6 +1,18 @@
+# Selector 选择器
+
+## 基础用法
+
+:::demo
+
+```vue
+<template>
+  <ml-selector
+    placeholder="请选择内容！"
+    :option="option"
+    @set-item-value="getItemValue"
+  ></ml-selector>
+</template>
 <script setup lang="ts">
-import MlSelector from './selector/src/selector'
-// import { ref } from 'vue'
 const option = [
   {
     label: 'I m huashishuai',
@@ -59,15 +71,6 @@ const getItemValue = (value: any) => {
   console.log(value)
 }
 </script>
+```
 
-<template>
-  <div>
-    <ml-selector
-      placeholder="请选择内容！"
-      :option="option"
-      @set-item-value="getItemValue"
-    ></ml-selector>
-  </div>
-</template>
-
-<style scoped></style>
+:::

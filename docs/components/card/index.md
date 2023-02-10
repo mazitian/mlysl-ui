@@ -59,7 +59,7 @@
 ```vue
 <template>
   <ml-card style="width:400px" :body-style="{ padding: '0px' }">
-    <img src="http://localhost:5173/logo.png" />
+    <img src="https://img0.baidu.com/it/u=2028084904,3939052004&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" />
   </ml-card>
 </template>
 ```

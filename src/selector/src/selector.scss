@@ -1,0 +1,69 @@
+@import '../../assets/common.scss';
+
+.ml-selector {
+  width: 300px;
+  &__menu {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    margin-top: 7px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    max-height: 220px;
+    overflow-y: auto;
+    &--item {
+      height: 35px;
+      text-align: center;
+      line-height: 35px;
+      font-size: 14px;
+      color: #666;
+      margin: 10px 0;
+      transition: background-color 0.2s linear;
+      &:hover {
+        background-color: #E8EDFC;
+      }
+    }
+  }
+}
+.ml-option {
+  position: relative;
+  width: 100%;
+  height: 38px;
+  &__input {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #c2bdbd;
+    border-radius: 5px;
+    outline: node;
+    transition: all 0.2s linear;
+    &:focus {
+      border-color: $ml-primary;
+      box-shadow: 0 0 3px $ml-primary;
+    }
+  }
+  &__placeholder {
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    color: #999;
+  }
+  &__icon1 {
+    position: absolute;
+    font-size: 22px;
+    top: 8px;
+    right: 15px;
+  }
+  &__icon2 {
+    position: absolute;
+    font-size: 22px;
+    top: 8px;
+    right: 15px;
+    display: none;
+  }
+}

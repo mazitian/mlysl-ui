@@ -118,9 +118,9 @@ export default defineComponent({
     <template #header="{ close }">
       <div class="my-header">
         <h4>This is a custom header!</h4>
-        <s-button type="danger" @click="close">
+        <ml-button type="danger" @click="close">
           Close
-        </s-button>
+        </ml-button>
       </div>
     </template>
     This is dialog content.
