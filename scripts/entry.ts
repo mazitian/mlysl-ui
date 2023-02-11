@@ -18,6 +18,9 @@ import TabPlugin, { Tabs, Tab } from '../src/tab'
 import PaginationPlugin, { Pagination } from '../src/pagination'
 import LinkPlugin, { Link } from '../src/link'
 import CardPlugin, { Card } from '../src/card'
+import SelectorPlugin, { Selector } from '../src/selector'
+import DownLineIconPlugin, { DownLineIcon } from '../src/icon/down-line'
+import ContainerPlugin, { Container } from '../src/container'
 
 const installs = [
   ButtonPlugin,
@@ -37,7 +40,10 @@ const installs = [
   PaginationPlugin,
   CloseIconPlugin,
   LinkPlugin,
-  CardPlugin
+  CardPlugin,
+  SelectorPlugin,
+  DownLineIconPlugin,
+  ContainerPlugin
 ]
 
 export {
@@ -59,7 +65,10 @@ export {
   Pagination,
   CloseIcon,
   Link,
-  Card
+  Card,
+  Selector,
+  DownLineIcon,
+  Container
 }
 
 export default {

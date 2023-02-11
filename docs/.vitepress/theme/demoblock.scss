@@ -16,11 +16,38 @@ $disabled-text: #adb0b8;
 // 点击复制代码 message样式修复
 .demoblock-message-wrap {
   .demoblock-message-content {
-    background-color: #6c9bee !important;
+    background-color: #306abb80 !important;
+  }
+}
+
+.link {
+  padding-left: 10px;
+  height: 36px;
+  line-height: 36px;
+}
+
+.link.active[data-v-5bf915fe] {
+  border-radius: 6px;
+  background: #EEF5FE;
+}
+
+.link[data-v-5bf915fe] {
+  &:hover {
+    color: #5A9CF8;
   }
 }
 
 .dark {
+  .link.active[data-v-5bf915fe] {
+    border-radius: 6px;
+    background: #1B222B;
+  }
+  
+  .link[data-v-5bf915fe] {
+    &:hover {
+      color: #5A9CF8;
+    }
+  }
   .demo-block {
     border: solid 1px $dividing-line-dark !important;
   }

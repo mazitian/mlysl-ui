@@ -1,0 +1,60 @@
+html.dark {
+  .ml-header,
+  .ml-footer {
+    background-color: #213d5b;
+    color: #e5eaf3;
+  }
+  .ml-aside {
+    background-color: #1d3043;
+    color: #e5eaf3;
+  }
+  .ml-main {
+    background-color: #18222c;
+    color: #e5eaf3;
+  }
+}
+
+.ml-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-basis: auto;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.ml-container__horizontal {
+  flex-direction: column;
+}
+
+.ml-header {
+  width: 100%;
+  padding: 0 20px;
+  background-color: rgb(125, 188, 234);
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+.ml-aside {
+  min-height: 60px;
+  background-color: rgb(59, 160, 233);
+  overflow: auto;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+.ml-main {
+  display: block;
+  padding: 20px;
+  min-height: 60px;
+  flex: 1;
+  flex-basis: auto;
+  overflow: auto;
+  box-sizing: border-box;
+  background-color: rgb(16, 142, 233);
+}
+.ml-footer {
+  width: 100%;
+  padding: 0 20px;
+  background-color: rgb(125, 188, 234);
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
