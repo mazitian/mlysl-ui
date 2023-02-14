@@ -5,7 +5,7 @@
 .ml-pager {
   list-style: none !important;
   display: flex;
-  padding-left: 0;
+  padding-left: 0 !important;
   li {
     margin-top: 0 !important;
     padding: 0 4px;

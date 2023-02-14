@@ -1,3 +1,4 @@
+@import '../assets/common.scss';
 .ml-tabs {
   display: flex;
   flex-direction: column;
@@ -26,19 +27,69 @@
 
       &.active {
         font-weight: 700;
-        border-bottom: 2px solid #409eff;
-        color: #409eff;
+        border-bottom: 2px solid $ml-primary;
+        color: $ml-primary;
 
         svg {
-          fill: #409eff;
+          fill: $ml-primary;
         }
       }
 
       &:hover {
-        color: #409eff;
+        color: $ml-primary-hover;
 
         svg {
-          fill: #409eff;
+          fill: $ml-primary-hover;
+        }
+      }
+    }
+  }
+}
+
+html.dark {
+  .ml-tabs {
+    display: flex;
+    flex-direction: column;
+
+    ul.ml-tabs__nav {
+      list-style: none;
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      border-bottom: 2px solid #e4e7ed;
+      cursor: pointer;
+
+      li {
+        margin-left: 32px;
+        margin-bottom: -2px;
+        color: #e4e7ed;
+        padding-bottom: 4px;
+
+        svg {
+          fill: #e4e7ed;
+          display: inline-block;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &.active {
+          font-weight: 700;
+          border-bottom: 2px solid $ml-primary;
+          color: $ml-primary;
+
+          svg {
+            fill: $ml-primary;
+          }
+        }
+
+        &:hover {
+          color: $ml-primary-hover;
+
+          svg {
+            fill: $ml-primary-hover;
+          }
         }
       }
     }

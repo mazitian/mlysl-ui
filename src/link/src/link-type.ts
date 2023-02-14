@@ -1,6 +1,6 @@
 import type { PropType, ExtractPropTypes } from 'vue'
 
-export type ILinkType = 'primary' | 'secondary' | 'info' | 'warning' | 'danger'
+export type ILinkType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
 
 export const linkProps = {
   type: {
@@ -14,6 +14,10 @@ export const linkProps = {
   underline: {
     type: Boolean,
     default: false
+  },
+  href: {
+    type: String,
+    default: '/'
   }
 } as const
 export type LinkProps = ExtractPropTypes<typeof linkProps>

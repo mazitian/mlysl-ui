@@ -1,14 +1,14 @@
-import { IInnerMenuNode, IMenuNode } from './menu-type'
+import { IInnerTreeNode, ITreeNode } from './tree-type'
 
-export function generateInnerMenu(
-  menu: IMenuNode[],
+export function generateInnerTree(
+  tree: ITreeNode[],
   level = 0, // 节点层级
-  parentNode = {} as IInnerMenuNode
-): IInnerMenuNode[] {
+  parentNode = {} as IInnerTreeNode
+): IInnerTreeNode[] {
   level++
-  return menu.reduce((prev, cur) => {
+  return tree.reduce((prev, cur) => {
     // 创建一个新节点
-    const o = { ...cur } as IInnerMenuNode
+    const o = { ...cur } as IInnerTreeNode
     // 设置层级
     o.level = level
     // 如果层级比父节点层级高则是子级，设置父级parentId
@@ -17,7 +17,7 @@ export function generateInnerMenu(
     }
     if (o.children) {
       // 如果存在children，则递归处理这些子节点
-      const children = generateInnerMenu(o.children, level, o)
+      const children = generateInnerTree(o.children, level, o)
       // 处理完删除多余children属性
       delete o.children
       // 将新构造的节点o和已拍平数据拼接起来
@@ -32,5 +32,5 @@ export function generateInnerMenu(
       // 将新构造的节点o和已拍平数据拼接起来
       return prev.concat(o)
     }
-  }, [] as IInnerMenuNode[])
+  }, [] as IInnerTreeNode[])
 }

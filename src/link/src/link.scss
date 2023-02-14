@@ -16,25 +16,25 @@
     left: 0;
     right: 0;
     height: 0;
-    bottom: 0;
-    // border-bottom: 1px solid #colors[primary];
+    bottom: -3px;
+    border-bottom: 1px solid #5d80f4;
   }
 }
 
-.ml-link--primary {
-  color: #409eff;
+.ml-link--primary.primary {
+  color: #5d80f4;
 }
 
 .ml-link--primary:hover {
   &:not(.is-disabled) {
     opacity: 0.8;
-    color: #79bbff;
+    color: #5d80f4;
   }
 }
 
 .ml-link--primary.is-disabled {
   opacity: 0.7;
-  color: #colors[primary];
+  color: #5d80f4;
 }
 
 .ml-link.is-disabled:hover {
@@ -45,28 +45,28 @@
   &:not(.is-disabled) {
     &::after {
       display: block;
-      border-bottom: 1px solid #colors[primary];
+      border-bottom: 1px solid #5d80f4;
     }
   }
 }
 
 // Success
-.ml-link--success.sucesss {
-  color: #colors[success];
+.ml-link--success.success {
+  color: #67c23a;
 }
 
 .ml-link--success:hover {
   &:not(.is-disabled) {
     opacity: 0.8;
-    color: #colors[success];
+    color: #67c23a;
   }
 }
 
 .ml-link--success.is-disabled {
   opacity: 0.7;
-  color: #colors[success];
+  color: #67c23a;
   &:hover {
-    color: #colors[success];
+    color: #67c23a;
   }
 }
 
@@ -74,28 +74,28 @@
   &:not(.is-disabled) {
     &::after {
       display: block;
-      border-bottom: 1px solid #colors[success];
+      border-bottom: 1px solid #67c23a;
     }
   }
 }
 
 // info
 .ml-link--info.info {
-  color: #colors[info];
+  color: #909399;
 }
 
 .ml-link--info:hover {
   &:not(.is-disabled) {
     opacity: 0.8;
-    color: #colors[primary];
+    color: #909399;
   }
 }
 
 .ml-link--info.is-disabled {
   opacity: 0.8;
-  color: #colors[info];
+  color: #909399;
   &:hover {
-    color: #colors[info];
+    color: #909399;
   }
 }
 
@@ -103,29 +103,29 @@
   &:not(.is-disabled) {
     &::after {
       display: block;
-      border-bottom: 1px solid #colors[info];
+      border-bottom: 1px solid #909399;
     }
   }
 }
 
 // danger
 
-.ml-link--danger {
-  color: #colors[danger];
+.ml-link--danger.danger {
+  color: #f56c6c;
 }
 
 .ml-link--danger:hover {
   &:not(.is-disabled) {
     opacity: 0.8;
-    color: #colors[danger];
+    color: #f56c6c;
   }
 }
 
 .ml-link--danger.is-disabled {
   opacity: 0.8;
-  color: #colors[danger];
+  color: #f56c6c;
   &:hover {
-    color: #colors[danger];
+    color: #f56c6c;
   }
 }
 
@@ -133,38 +133,40 @@
   &:not(.is-disabled) {
     &::after {
       display: block;
-      border-bottom: 1px solid #colors[danger];
+      border-bottom: 1px solid #f56c6c;
     }
   }
 }
 
 // warning
-.ml-link--warning {
-  color: #colors[warning];
+.ml-link--warning.warning {
+  &:not(.is-disabled) {
+    color: #e6a23c;
+  }
 }
 
 .ml-link--warning:hover {
   opacity: 0.8;
-  color: #colors[-warning-hover];
+  color: #e6a23c;
 }
 
 .ml-link.warning-distbled.is-disabled:hover {
   cursor: not-allowed;
   &:hover {
-    color: #colors[warning];
+    color: #e6a23c;
   }
 }
 
 .ml-link--warning.is-disabled {
   opacity: 0.8;
-  color: #colors[warning];
+  color: #e6a23c;
 }
 
 .ml-link.is-underline:hover {
   &:not(.is-disabled) {
     &::after {
       display: block;
-      border-bottom: 1px solid #colors[warning];
+      border-bottom: 1px solid #e6a23c;
     }
   }
 }

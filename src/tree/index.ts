@@ -1,12 +1,12 @@
 import { App } from 'vue'
-import Menu from './src/menu'
+import Tree from './src/tree'
 
 // 具名导出
-export { Menu }
+export { Tree }
 
 // 导出插件
 export default {
   install(app: App) {
-    app.component(Menu.name, Menu)
+    app.component(Tree.name, Tree)
   }
 }

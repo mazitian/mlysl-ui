@@ -6,8 +6,10 @@
 
 ```vue
 <template>
-  <ml-button></ml-button>
-  <ml-button>button</ml-button>
+  <div class="button">
+    <ml-button></ml-button>
+    <ml-button>button</ml-button>
+  </div>
 </template>
 ```
 
@@ -21,9 +23,11 @@
 
 ```vue
 <template>
-  <ml-button type="primary">Primary</ml-button>
-  <ml-button>Secondary</ml-button>
-  <ml-button type="text">Text</ml-button>
+  <div class="button">
+    <ml-button type="primary">Primary</ml-button>
+    <ml-button>Secondary</ml-button>
+    <ml-button type="text">Text</ml-button>
+  </div>
 </template>
 ```
 
@@ -37,13 +41,13 @@
 
 ```vue
 <template>
-  <div>
+  <div class="button">
     <ml-button type="primary" size="small">Small</ml-button>
     <ml-button type="primary">Medium</ml-button>
     <ml-button type="primary" size="large">Large</ml-button>
   </div>
   ☼
-  <div>
+  <div class="button">
     <ml-button size="small">Small</ml-button>
     <ml-button>Medium</ml-button>
     <ml-button size="large">Large</ml-button>
@@ -57,12 +61,14 @@
 
 通过 disabled 属性禁用按钮
 
-:::demo 
+:::demo
 
 ```vue
 <template>
-  <ml-button type="primary">Primary</ml-button>
-  <ml-button type="primary" disabled>Disabled</ml-button>
+  <div class="button">
+    <ml-button type="primary">Primary</ml-button>
+    <ml-button type="primary" disabled>Disabled</ml-button>
+  </div>
 </template>
 ```
 
@@ -93,3 +99,9 @@
 | size | `button`的尺寸 | `String` | `small` / `medium` / `large` | `medium` |
 | disabled | 是否禁用 | `Boolean` | - | `false` |
 | block | 是否为块级按钮 | `Boolean` | - | `false` |
+
+<style>
+.button > * {
+  margin-right: 15px;
+}
+</style>

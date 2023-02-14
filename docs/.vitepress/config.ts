@@ -36,10 +36,7 @@ export default {
             { text: 'Button 按钮', link: '/components/button/' },
             { text: 'Icon 图标', link: '/components/icon/' },
             { text: 'Input 输入框', link: '/components/input/' },
-            {
-              text: 'virtual-list 虚拟滚动',
-              link: '/components/virtual-list/'
-            },
+            { text: 'ScrollBar 滚动条', link: '/components/scrollbar/' },
             { text: 'Link 文字链接', link: '/components/link/' }
           ]
         },
@@ -50,7 +47,7 @@ export default {
         {
           text: '导航型组件',
           items: [
-            { text: 'Menu 树状菜单', link: '/components/menu/' },
+            { text: 'Tree 树', link: '/components/tree/' },
             { text: 'Dropdown 下拉菜单', link: '/components/dropdown/' },
             { text: 'Breadcrumb 面包屑', link: '/components/breadcrumb/' },
             { text: 'Tabs 标签页', link: '/components/tabs/' }

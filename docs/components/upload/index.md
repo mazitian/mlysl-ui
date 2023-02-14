@@ -2,9 +2,9 @@
 
 ## 基础功能
 
-Menu 组件基本用法，传入`data`属性即可。 
+Tree 组件基本用法，传入`data`属性即可。
 
-:::demo Menu 组件基本用法，传入 data 属性
+:::demo Tree 组件基本用法，传入 data 属性
 
 ```vue
 <script setup lang="ts">
@@ -15,18 +15,26 @@ const getFilesList = (files: File[]) => {
 </script>
 
 <template>
-  <ml-upload multiple @getFilesList={getFilesList}>
+  <ml-upload
+    multiple
+    @getFilesList="
+      {
+        getFilesList
+      }
+    "
+  >
     <ml-button></ml-button>
   </ml-upload>
 </template>
 ```
 
 :::
+
 ## 拖拽上传
 
-Menu 组件基本用法，传入`data`属性即可。 
+Tree 组件基本用法，传入`data`属性即可。
 
-:::demo Menu 组件基本用法，传入 data 属性
+:::demo Tree 组件基本用法，传入 data 属性
 
 ```vue
 <script setup lang="ts">
@@ -37,7 +45,15 @@ const getFilesList = (files: File[]) => {
 </script>
 
 <template>
-  <ml-upload drag multiple @getFilesList={getFilesList}></ml-upload>
+  <ml-upload
+    drag
+    multiple
+    @getFilesList="
+      {
+        getFilesList
+      }
+    "
+  ></ml-upload>
 </template>
 ```
 

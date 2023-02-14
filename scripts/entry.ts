@@ -1,7 +1,7 @@
 // /scripts/entry.ts
 import type { App } from 'vue'
 import ButtonPlugin, { Button } from '../src/button'
-import MenuPlugin, { Menu } from '../src/menu'
+import TreePlugin, { Tree } from '../src/Tree'
 import FormPlugin, { Form } from '../src/form'
 import InputPlugin, { Input } from '../src/input'
 import IconPlugin, { Icon } from '../src/icon'
@@ -13,7 +13,7 @@ import PopoverPlugin, { Popover } from '../src/popover'
 import UploadPlugin, { Upload } from '../src/upload'
 import BreadcrumbPlugin, { Breadcrumb } from '../src/breadcrumb'
 import ModalPlugin, { Modal } from '../src/modal'
-import VirtualListPlugin, { VirtualList } from '../src/virtual-list'
+import ScrollbarPlugin, { Scrollbar } from '../src/scrollbar'
 import TabPlugin, { Tabs, Tab } from '../src/tab'
 import PaginationPlugin, { Pagination } from '../src/pagination'
 import LinkPlugin, { Link } from '../src/link'
@@ -24,7 +24,7 @@ import ContainerPlugin, { Container } from '../src/container'
 
 const installs = [
   ButtonPlugin,
-  MenuPlugin,
+  TreePlugin,
   FormPlugin,
   InputPlugin,
   IconPlugin,
@@ -35,7 +35,7 @@ const installs = [
   UploadPlugin,
   BreadcrumbPlugin,
   ModalPlugin,
-  VirtualListPlugin,
+  ScrollbarPlugin,
   TabPlugin,
   PaginationPlugin,
   CloseIconPlugin,
@@ -48,7 +48,7 @@ const installs = [
 
 export {
   Button,
-  Menu,
+  Tree,
   Form,
   Input,
   Icon,
@@ -59,7 +59,7 @@ export {
   Upload,
   Breadcrumb,
   Modal,
-  VirtualList,
+  Scrollbar,
   Tabs,
   Tab,
   Pagination,

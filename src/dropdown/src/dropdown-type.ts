@@ -1,18 +1,16 @@
 import { Placement } from '@floating-ui/dom'
 import type { PropType, ExtractPropTypes, Component } from 'vue'
 
+export type IDropdownTrigger = 'hover' | 'click' | 'manual'
+
 export const dropdownProps = {
   data: {
     type: Object as PropType<Array<IDropdownNode>>,
     required: true
   },
   trigger: {
-    type: String,
+    type: String as PropType<IDropdownTrigger>,
     default: 'hover'
-  },
-  showArrow: {
-    type: Boolean,
-    default: true
   },
   placement: {
     type: String as PropType<Placement>,
@@ -24,5 +22,6 @@ export type DropdownProps = ExtractPropTypes<typeof dropdownProps>
 export interface IDropdownNode {
   label: String
   id?: String
+  disabled?: Boolean
   click?: () => void
 }

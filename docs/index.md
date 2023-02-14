@@ -1,15 +1,15 @@
 ---
 layout: home
 
-title: Mlysl-UI
+title: MLYSL UI
 titleTemplate: 一个Vue3组件库
 
 hero:
-  name: Mlysl-UI
+  name: MLYSL UI
   text: 一个Vue3组件库
   tagline: 开发者自己都不用的组件库
   image:
-    src: /logo.png
+    src: /headlogo.png
     alt: Mlysl
   actions:
     - theme: brand

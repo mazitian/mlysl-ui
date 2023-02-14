@@ -10,17 +10,18 @@
 <template>
   <ml-form :model="model" layout="horizontal">
     <ml-form-item label="用户名：">
-      <ml-input v-model="model.user"/>
+      <ml-input v-model="model.user" />
     </ml-form-item>
   </ml-form>
 </template>
 <script setup>
-  import {ref} from 'vue'
-  const model = ref({
-    user: 'tom'
-  })
+import { ref } from 'vue'
+const model = ref({
+  user: 'tom'
+})
 </script>
 ```
+
 :::
 
 ## 表单样式
@@ -85,15 +86,18 @@ const labelSize = ref('md')
 const labelAlign = ref('start')
 </script>
 ```
+
 :::
 
 ## 表单校验
-:::demo 
+
+:::demo
+
 ```vue
 <template>
-  <ml-form 
-    :model="model" 
-    :rules="rules" 
+  <ml-form
+    :model="model"
+    :rules="rules"
     layout="vertical"
     @submit="onLogin"
     ref="loginForm"
@@ -110,26 +114,66 @@ const labelAlign = ref('start')
   </ml-form>
 </template>
 <script setup>
-  import {ref} from 'vue'
-  const model = ref({
-    user: '',
-    pwd: ''
-  })
-  const rules = ref({
-    user: [{required: true, message: '用户名为必填项'}],
-    pwd: [{required: true, message: '密码为必填项'}],
-  })
+import { ref } from 'vue'
+const model = ref({
+  user: '',
+  pwd: ''
+})
+const rules = ref({
+  user: [{ required: true, message: '用户名为必填项' }],
+  pwd: [{ required: true, message: '密码为必填项' }]
+})
 
-  const loginForm = ref(null)
-  const onLogin = () => {
-    loginForm.value.validate(valid => {
-      if (valid) {
-        alert('登录成功')
-      } else {
-        alert('校验失败，请重试！')
-      }
-    })
-  }
+const loginForm = ref(null)
+const onLogin = () => {
+  loginForm.value.validate(valid => {
+    if (valid) {
+      alert('登录成功')
+    } else {
+      alert('校验失败，请重试！')
+    }
+  })
+}
 </script>
 ```
+
 :::
+
+## Form API
+
+### Form 属性
+
+| 参数       | 说明         | 类型     | 可选值                     | 默认    |
+| ---------- | ------------ | -------- | -------------------------- | ------- |
+| model      | 绑定表单数据 | `object` | —                          | —       |
+| layout     | 表单排列方式 | `string` | `horizontal` / `vertical`  | —       |
+| labelSize  | 表单尺寸     | `string` | `sm` / `md` / `lg`         | `md`    |
+| labelAlign | 表单位置     | `string` | `start` / `center` / `end` | `start` |
+| rules      | 定义校验规则 | `Object` | —                          | —       |
+
+### Form 事件
+
+| 事件名 | 说明     | 参数 |
+| ------ | -------- | ---- |
+| submit | 表单提交 | —    |
+
+### Form 插槽
+
+| 插槽名  | 说明           | 子标签   |
+| ------- | -------------- | -------- |
+| default | 自定义默认内容 | FormItem |
+
+## FormItem API
+
+### Form Item 属性
+
+| 参数  | 说明         | 类型     | 可选值 | 默认 |
+| ----- | ------------ | -------- | ------ | ---- |
+| label | 表单名称     | `string` | —      | —    |
+| field | 绑定数据变量 | `string` | —      | —    |
+
+### Form 插槽
+
+| 插槽名  | 说明       | 子标签 |
+| ------- | ---------- | ------ |
+| default | 表单的内容 | —      |

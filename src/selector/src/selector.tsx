@@ -11,7 +11,7 @@ export default defineComponent({
   props: selectorProps,
   emits: ['setItemValue'],
   setup(props: SelectorProps, { slots, emit }) {
-    const { placeholder, option } = toRefs(props)
+    const { placeholder, option, size } = toRefs(props)
     const host = ref()
     const dropdown = ref()
     const inputValue = ref('')
@@ -33,7 +33,7 @@ export default defineComponent({
     }
     return () => (
       <div class="ml-selector" v-focus>
-        <div class="ml-option" ref={host}>
+        <div class={`ml-option ml-option--${size.value}`} ref={host}>
           <label class={'ml-option__placeholder'}>
             {inputValue.value.length > 0 ? '' : placeholder.value}
           </label>
@@ -83,15 +83,23 @@ export default defineComponent({
           </span>
         </div>
         {searchData.value.length > 0 ? (
-          <div class="ml-selector__menu" ref={dropdown}>
-            {searchData.value.map(item => (
-              <div
-                class="ml-selector__menu--item"
-                onClick={() => setItemValue(item)}
-              >
-                {item.label}
-              </div>
-            ))}
+          <div class={'ml-selector__menu'} ref={dropdown}>
+            {searchData.value.map(item =>
+              !item.disabled ? (
+                <div
+                  class={'ml-selector__menu--item'}
+                  onClick={() => setItemValue(item)}
+                >
+                  {item.label}
+                </div>
+              ) : (
+                <div
+                  class={'ml-selector__menu--item ml-selector__menu--disabled'}
+                >
+                  {item.label}
+                </div>
+              )
+            )}
           </div>
         ) : (
           <div class="ml-selector__menu text-center text-gray-400">No data</div>

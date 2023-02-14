@@ -24,3 +24,11 @@
     }
   }
 }
+
+.ml-dropdown__item.ml-dropdown__disabled {
+  color: #a8abb2;
+  cursor: no-drop;
+  &:hover {
+    background-color: transparent;
+  }
+}

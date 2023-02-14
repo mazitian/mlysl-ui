@@ -9,7 +9,8 @@ export default defineComponent({
   name: 'MlBreadcrumbItem',
   props: breadcrumbItemProps,
   setup(props: BreadcrumbItemProps, { slots }) {
-    const { separatorIcon, separator, to, replace } = toRefs(props)
+    const { to, replace, separatorItem } = toRefs(props)
+    const separator = inject('separator')
     // 获取vue实例
     const instance = getCurrentInstance()
     const router = instance?.appContext.config.globalProperties.$router
@@ -17,21 +18,20 @@ export default defineComponent({
     const onClick = () => {
       if (!to.value || !router) return
       replace.value ? router.replace(to.value) : router.push(to.value)
-      console.log(router)
     }
+    const itemClass = to.value ? 'is-link' : ''
     return () => (
-      <>
-        <span class="ml-breadcrumb-item" onClick={onClick}>
+      <span class="ml-breadcrumb__item">
+        <span
+          class={`ml-breadcrumb__item--text ${itemClass}`}
+          onClick={onClick}
+        >
           {slots.default?.()}
         </span>
-        <span class="ml-breadcrumb-item__separator">
-          {separatorIcon.value ? (
-            <span>{separatorIcon.value}</span>
-          ) : (
-            <span>{separator.value}</span>
-          )}
+        <span class="ml-breadcrumb__item--separator">
+          {separatorItem.value ? separatorItem.value : separator}
         </span>
-      </>
+      </span>
     )
   }
 })

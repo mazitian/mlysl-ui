@@ -16,7 +16,7 @@ export default defineComponent({
   name: 'MlDropdown',
   props: dropdownProps,
   setup(props: DropdownProps, { slots }) {
-    const { data, trigger, showArrow, placement } = toRefs(props)
+    const { data, trigger, placement } = toRefs(props)
     const isShow = ref(false)
     const host = ref()
     const dropdown = ref()
@@ -27,9 +27,7 @@ export default defineComponent({
     const updatePosition = () => {
       // 中间件
       const middleware = []
-      if (showArrow.value) {
-        middleware.push(offset(8))
-      }
+      middleware.push(offset(5))
       // 如果用户没有指定placement，则自动调整定位
       if (!placement.value) {
         middleware.push(autoPlacement())
@@ -112,7 +110,7 @@ export default defineComponent({
           isShow.value = true
           e.preventDefault()
         })
-        host.value.addEventListener('mouseleave', () => {
+        document.addEventListener('click', () => {
           const t = setTimeout(() => {
             isShow.value = false
           }, 100)
@@ -120,7 +118,7 @@ export default defineComponent({
             clearTimeout(t)
           })
         })
-        dropdown.value.addEventListener('mouseleave', () => {
+        document.addEventListener('click', () => {
           const t = setTimeout(() => {
             isShow.value = false
           }, 100)
@@ -136,11 +134,17 @@ export default defineComponent({
           {slots.default?.()}
         </span>
         <div class="ml-dropdown" ref={dropdown} v-show={isShow.value}>
-          {data.value.map(item => (
-            <div class="ml-dropdown__item" onClick={item.click}>
-              {item.label}
-            </div>
-          ))}
+          {data.value.map(item =>
+            !item.disabled ? (
+              <div class="ml-dropdown__item" onClick={item.click}>
+                {item.label}
+              </div>
+            ) : (
+              <div class="ml-dropdown__item ml-dropdown__disabled">
+                {item.label}
+              </div>
+            )
+          )}
         </div>
       </>
     )

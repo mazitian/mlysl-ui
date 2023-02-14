@@ -24,17 +24,14 @@ $disabled-text: #adb0b8;
   padding-left: 10px;
   height: 36px;
   line-height: 36px;
-}
-
-.link.active[data-v-5bf915fe] {
-  border-radius: 6px;
-  background: #EEF5FE;
-}
-
-.link[data-v-5bf915fe] {
   &:hover {
-    color: #5A9CF8;
+    color: #6c9bee !important;
   }
+}
+
+.link.active {
+  border-radius: 6px;
+  background: #E9F4FE;
 }
 
 .dark {
