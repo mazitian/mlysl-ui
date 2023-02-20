@@ -25,7 +25,7 @@
       </ml-button>
     </ml-dropdown>
     <ml-dropdown :data="data" trigger="hover">
-      <ml-button type="primary"> Dropdown List </ml-button>
+      <ml-button type="secondary"> Dropdown List </ml-button>
     </ml-dropdown>
   </div>
 </template>
@@ -82,7 +82,7 @@ const data = ref([
       </ml-button>
     </ml-dropdown>
     <ml-dropdown :data="data" trigger="hover">
-      <ml-button type="primary"> Dropdown List </ml-button>
+      <ml-button type="secondary"> Dropdown List </ml-button>
     </ml-dropdown>
   </div>
 </template>
@@ -271,7 +271,7 @@ const data = ref([
       </ml-button>
     </ml-dropdown>
     <ml-dropdown :data="data" trigger="hover">
-      <ml-button type="primary"> Dropdown List </ml-button>
+      <ml-button type="secondary"> Dropdown List </ml-button>
     </ml-dropdown>
   </div>
 </template>

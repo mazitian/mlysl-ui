@@ -33,7 +33,7 @@
 
       &:hover {
         &.ml-upload-list_item-name {
-          color: #409eff;
+          color: #7C92EE;
         }
         cursor: pointer;
         background: #f5f7fa;
@@ -54,7 +54,7 @@
   align-items: center;
   justify-content: center;
   &:hover {
-    border: 1px dashed #409eff;
+    border: 1px dashed #7C92EE;
   }
   &.ml-upload-content {
     text-align: center;
@@ -65,9 +65,85 @@
   }
 }
 .ml-upload-draggerenter {
-  border: 1px dashed #409eff;
+  border: 1px dashed #7C92EE;
 }
 em {
-  color: #409eff;
+  color: #7C92EE;
   font-style: normal;
+}
+
+html.dark {
+  .ml-upload {
+    &-list {
+      &_item:first-child {
+        margin-top: 10px;
+      }
+
+      &_item {
+        transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+        font-size: 14px;
+        color: #606266;
+        line-height: 1.8;
+        margin-top: 5px;
+        position: relative;
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: 100%;
+        &-name {
+          color: #606266;
+          display: block;
+          margin-right: 40px;
+          overflow: hidden;
+          padding-left: 4px;
+          text-overflow: ellipsis;
+          transition: color 0.3s;
+          white-space: nowrap;
+        }
+        &-status-label {
+          position: absolute;
+          right: 5px;
+          top: 0;
+          line-height: inherit;
+        }
+
+        &:hover {
+          &.ml-upload-list_item-name {
+            color: #7C92EE;
+          }
+          cursor: pointer;
+          background: #f5f7fa;
+        }
+      }
+    }
+  }
+
+  .ml-upload-dragger {
+    background-color: #242424;
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 360px;
+    height: 180px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      border: 1px dashed #7C92EE;
+    }
+    &.ml-upload-content {
+      text-align: center;
+      color: #606266;
+      &.ml-upload-icon {
+        font-size: 20px;
+      }
+    }
+  }
+  .ml-upload-draggerenter {
+    border: 1px dashed #7C92EE;
+  }
+  em {
+    color: #7C92EE;
+    font-style: normal;
+  }
 }

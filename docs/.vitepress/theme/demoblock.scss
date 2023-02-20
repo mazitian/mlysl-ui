@@ -468,3 +468,8 @@ div[class~='language-vue']:before {
   --vp-button-brand-hover-border: $brand;
   --vp-button-brand-active-border: #6c9bee;
 }
+
+.VPNav.no-sidebar {
+  backdrop-filter: blur(5px) !important;
+  background: transparent !important;
+}

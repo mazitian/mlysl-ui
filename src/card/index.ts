@@ -1,4 +1,3 @@
-// button/index.ts
 import { App } from 'vue'
 import Card from './src/card'
 

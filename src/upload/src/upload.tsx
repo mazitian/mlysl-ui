@@ -7,7 +7,7 @@ export default defineComponent({
   props: uploadrProps,
   emits: ['getFilesList'],
   setup(props: UploadrProps, { slots, emit }) {
-    const { accept, drag, multiple } = toRefs(props)
+    const { drag } = toRefs(props)
     const kIpt = ref()
     const fileArea = ref()
     const filesList = ref<File[]>([])
@@ -26,11 +26,6 @@ export default defineComponent({
     const delFile = (index: number): void => {
       filesList.value.splice(index, 1)
       emit('getFilesList', filesList.value)
-    }
-
-    const getFilesList = (file: File[]) => {
-      filesList.value = file
-      emit('getFilesList', file)
     }
     onMounted(() => {
       if (!drag.value) return
@@ -53,14 +48,7 @@ export default defineComponent({
     })
     return () => (
       <div class="ml-upload">
-        <input
-          type="file"
-          multiple={multiple.value}
-          accept={accept.value}
-          ref={kIpt}
-          onChange={getFiles}
-          v-show={false}
-        />
+        <input type="file" ref={kIpt} onChange={getFiles} v-show={false} />
         {drag.value ? (
           <div>
             <div class="ml-upload-dragger" ref={fileArea} onClick={fileUpload}>

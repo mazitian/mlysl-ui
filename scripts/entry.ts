@@ -13,7 +13,6 @@ import PopoverPlugin, { Popover } from '../src/popover'
 import UploadPlugin, { Upload } from '../src/upload'
 import BreadcrumbPlugin, { Breadcrumb } from '../src/breadcrumb'
 import ModalPlugin, { Modal } from '../src/modal'
-import ScrollbarPlugin, { Scrollbar } from '../src/scrollbar'
 import TabPlugin, { Tabs, Tab } from '../src/tab'
 import PaginationPlugin, { Pagination } from '../src/pagination'
 import LinkPlugin, { Link } from '../src/link'
@@ -21,6 +20,7 @@ import CardPlugin, { Card } from '../src/card'
 import SelectorPlugin, { Selector } from '../src/selector'
 import DownLineIconPlugin, { DownLineIcon } from '../src/icon/down-line'
 import ContainerPlugin, { Container } from '../src/container'
+import CarouselPlugin, { Carousel } from '../src/carousel'
 
 const installs = [
   ButtonPlugin,
@@ -35,7 +35,6 @@ const installs = [
   UploadPlugin,
   BreadcrumbPlugin,
   ModalPlugin,
-  ScrollbarPlugin,
   TabPlugin,
   PaginationPlugin,
   CloseIconPlugin,
@@ -43,7 +42,8 @@ const installs = [
   CardPlugin,
   SelectorPlugin,
   DownLineIconPlugin,
-  ContainerPlugin
+  ContainerPlugin,
+  CarouselPlugin
 ]
 
 export {
@@ -59,7 +59,6 @@ export {
   Upload,
   Breadcrumb,
   Modal,
-  Scrollbar,
   Tabs,
   Tab,
   Pagination,
@@ -68,7 +67,8 @@ export {
   Card,
   Selector,
   DownLineIcon,
-  Container
+  Container,
+  Carousel
 }
 
 export default {

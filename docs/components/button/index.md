@@ -25,7 +25,7 @@
 <template>
   <div class="button">
     <ml-button type="primary">Primary</ml-button>
-    <ml-button>Secondary</ml-button>
+    <ml-button type="secondary">Secondary</ml-button>
     <ml-button type="text">Text</ml-button>
   </div>
 </template>
@@ -46,11 +46,11 @@
     <ml-button type="primary">Medium</ml-button>
     <ml-button type="primary" size="large">Large</ml-button>
   </div>
-  ☼
+  <br/>
   <div class="button">
-    <ml-button size="small">Small</ml-button>
-    <ml-button>Medium</ml-button>
-    <ml-button size="large">Large</ml-button>
+    <ml-button type="secondary" size="small">Small</ml-button>
+    <ml-button type="secondary">Medium</ml-button>
+    <ml-button type="secondary" size="large">Large</ml-button>
   </div>
 </template>
 ```
@@ -83,7 +83,7 @@
 ```vue
 <template>
   <ml-button type="primary" block>Confirm</ml-button>
-  <ml-button block>Cancel</ml-button>
+  <ml-button type="secondary" block>Cancel</ml-button>
 </template>
 ```
 
@@ -102,6 +102,6 @@
 
 <style>
 .button > * {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 </style>

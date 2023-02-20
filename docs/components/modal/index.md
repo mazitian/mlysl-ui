@@ -1,38 +1,37 @@
 # Modal 对话框
 
 ## 基础功能
-:::demo 
+
+:::demo
+
 ```vue
 <template>
   <ml-button @click="open">打开</ml-button>
 
-  <ml-modal v-model="visible" title="小贴士" center :show-close="false" align-center>
+  <ml-modal
+    v-model="visible"
+    title="小贴士"
+    center
+    :show-close="false"
+    align-center
+  >
     <span>这是一条消息！</span>
     <template #footer>
       <div class="dialog-footer">
-        <ml-button style="margin-right: 12px;" @click="visible = false">取消</ml-button>
+        <ml-button style="margin-right: 12px;" @click="visible = false"
+          >取消</ml-button
+        >
         <ml-button @click="visible = false">确定</ml-button>
       </div>
     </template>
   </ml-modal>
 </template>
-<script>
-import { defineComponent, ref } from 'vue'
-
-export default defineComponent({
-  setup() {
-    const visible = ref(false)
-
-    const open = () => {
-      visible.value = true;
-    }
-
-    return {
-      visible,
-      open,
-    }
-  }
-})
+<script setup lang="ts">
+import { ref } from 'vue'
+const visible = ref(false)
+const open = () => {
+  visible.value = true
+}
 </script>
 
 <style>
@@ -42,74 +41,43 @@ export default defineComponent({
 }
 </style>
 ```
+
 :::
 
-
 ## 自定义内容
-通过插槽可以自定义Modal内容。我们有title、default和footer三个插槽可以使用。
-:::demo 
+
+通过插槽可以自定义 Modal 内容。我们有 title、default 和 footer 三个插槽可以使用。
+
+:::demo
+
 ```vue
 <template>
   <ml-button @click="open">打开</ml-button>
 
   <ml-modal v-model="visible" title="Shipping address" width="50%">
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Name</th>
-          <th>Address</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2016-05-02</td>
-          <td>John Smith</td>
-          <td>No.1518, Jinshajiang Road, Putuo District</td>
-        </tr>
-        <tr>
-          <td>2016-05-04</td>
-          <td>John Smith</td>
-          <td>No.1518, Jinshajiang Road, Putuo District</td>
-        </tr>
-        <tr>
-          <td>2016-05-01</td>
-          <td>John Smith</td>
-          <td>No.1518, Jinshajiang Road, Putuo District</td>
-        </tr>
-        <tr>
-          <td>2016-05-03</td>
-          <td>John Smith</td>
-          <td>No.1518, Jinshajiang Road, Putuo District</td>
-        </tr>
-      </tbody>
-    </table>
+    <template #title> this is title </template>
+    <ml-input v-model="val" placeholder="Please input" />
+    <template #footer> this is footer </template>
   </ml-modal>
 </template>
-<script>
-import { defineComponent, ref } from 'vue'
-
-export default defineComponent({
-  setup() {
-    const visible = ref(false)
-
-    const open = () => {
-      visible.value = true;
-    }
-
-    return {
-      visible,
-      open,
-    }
-  }
-})
+<script setup lang="ts">
+import { ref } from 'vue'
+const visible = ref(false)
+const val = ref('')
+const open = () => {
+  visible.value = true
+}
 </script>
 ```
+
 :::
 
 ## 自定义头部
-可以通过header插槽定义头部内容。
-:::demo 通过header插槽定义头部，上下文中有close方法用于关闭Modal
+
+可以通过 header 插槽定义头部内容。
+
+:::demo 通过 header 插槽定义头部，上下文中有 close 方法用于关闭 Modal
+
 ```vue
 <template>
   <ml-button @click="open">打开</ml-button>
@@ -118,30 +86,18 @@ export default defineComponent({
     <template #header="{ close }">
       <div class="my-header">
         <h4>This is a custom header!</h4>
-        <ml-button type="danger" @click="close">
-          Close
-        </ml-button>
+        <ml-button type="danger" @click="close"> Close </ml-button>
       </div>
     </template>
     This is dialog content.
   </ml-modal>
 </template>
-<script>
-import { defineComponent, ref } from 'vue'
-
-export default defineComponent({
-  setup() {
-    const visible = ref(false)
-    const open = () => {
-      visible.value = true;
-    }
-
-    return {
-      visible,
-      open,
-    }
-  }
-})
+<script setup lang="ts">
+import { ref } from 'vue'
+const visible = ref(false)
+const open = () => {
+  visible.value = true
+}
 </script>
 
 <style>
@@ -155,4 +111,5 @@ export default defineComponent({
 }
 </style>
 ```
+
 :::

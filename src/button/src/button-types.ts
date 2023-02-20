@@ -5,7 +5,7 @@ export type IButtonSize = 'small' | 'medium' | 'large'
 export const buttonProps = {
   type: {
     type: String as PropType<IButtonType>,
-    default: 'secondary'
+    default: 'primary'
   },
   size: {
     type: String as PropType<IButtonSize>,

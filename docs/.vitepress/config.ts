@@ -36,7 +36,6 @@ export default {
             { text: 'Button 按钮', link: '/components/button/' },
             { text: 'Icon 图标', link: '/components/icon/' },
             { text: 'Input 输入框', link: '/components/input/' },
-            { text: 'ScrollBar 滚动条', link: '/components/scrollbar/' },
             { text: 'Link 文字链接', link: '/components/link/' }
           ]
         },
@@ -47,7 +46,6 @@ export default {
         {
           text: '导航型组件',
           items: [
-            { text: 'Tree 树', link: '/components/tree/' },
             { text: 'Dropdown 下拉菜单', link: '/components/dropdown/' },
             { text: 'Breadcrumb 面包屑', link: '/components/breadcrumb/' },
             { text: 'Tabs 标签页', link: '/components/tabs/' }
@@ -58,14 +56,16 @@ export default {
           items: [
             { text: 'Form 表单', link: '/components/form/' },
             { text: 'Upload 上传', link: '/components/upload/' },
-            { text: 'Selector 选择器', link: '/components/selector/' }
+            { text: 'Selector 选择器', link: '/components/selector/' },
+            { text: 'Tree 树', link: '/components/tree/' }
           ]
         },
         {
           text: '数据展示型组件',
           items: [
             { text: 'Pagination 分页', link: '/components/pagination/' },
-            { text: 'Card 卡片', link: '/components/card/' }
+            { text: 'Card 卡片', link: '/components/card/' },
+            { text: 'Carousel 走马灯', link: '/components/carousel/' }
           ]
         },
         {

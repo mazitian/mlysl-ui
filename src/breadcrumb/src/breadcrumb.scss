@@ -34,3 +34,41 @@
   color: #606266;
   font-weight: bold;
 }
+
+html.dark {
+  .ml-breadcrumb {
+    font-size: 14px;
+    line-height: 1;
+    color: cornsilk;
+    &__item {
+      a {
+        color: cornsilk;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      a:hover,
+      .is-link:hover {
+        color: $ml-primary-hover;
+        cursor: pointer;
+      }
+      a:active,
+      .is-link:active {
+        color: $ml-primary-active;
+        cursor: pointer;
+      }
+      &--separator {
+        margin: 0 9px;
+        font-weight: bold;
+      }
+    }
+    &__item:last-child {
+      .ml-breadcrumb__item--separator {
+        display: none;
+      }
+    }
+  }
+  .is-link {
+    color: cornsilk;
+    font-weight: bold;
+  }
+}

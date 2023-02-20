@@ -272,4 +272,4 @@ const getItemValue = (value: any) => {
 
 | 方法名         | 说明                     | 参数 |
 | -------------- | ------------------------ | ---- |
-| set-item-value | 获取选中的菜单的 `value` | \_   |
+| set-item-value | 获取选中的菜单的 `value` | _   |

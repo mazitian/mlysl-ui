@@ -60,7 +60,7 @@ export default defineComponent({
       // 中间件
       const middleware = []
       if (showArrow.value) {
-        middleware.push(offset(8))
+        middleware.push(offset(12))
         middleware.push(arrow({ element: arrowRef.value }))
       }
       // 如果用户没有指定placement，则自动调整定位
